@@ -1,0 +1,5 @@
+*
+!.gitignore
+!*.nix
+!src/
+!*.py
