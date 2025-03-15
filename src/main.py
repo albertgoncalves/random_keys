@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+from typing import List
+
 import sys
 
 import numpy as np
@@ -8,12 +10,12 @@ PITCHES = list(range(12))
 NOTES = list(zip("ABCDEFG", [9, 11, 0, 2, 4, 5, 7]))
 
 
-def main():
+def main() -> None:
     assert len(sys.argv) == 4, sys.argv
     params = [int(sys.argv[1]), int(sys.argv[2]), bool(int(sys.argv[3]))]
 
     weights = np.empty(12, dtype="float64")
-    pitches = []
+    pitches: List[int] = []
     notes = []
 
     rng = np.random.default_rng()
